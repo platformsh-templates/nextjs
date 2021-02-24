@@ -20,3 +20,9 @@ hooks:
 web:
     commands:
         start: npx next start -p $PORT
+
+mounts:
+    # Next.js will try to cache files, so it must be writeable.
+    '/.next/cache':
+        source: local
+        source_path: '.next/cache'
