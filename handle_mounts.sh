@@ -24,11 +24,8 @@ clean_mount_defn(){
 #   as a mount to the tmp directory MOUNT_TMP.
 stage_files() {
     MOUNT=`clean_mount_defn $1`
-    # Create the tmp directory (MOUNT_TMP) on the first pass only. (/app/platformsh-mounts on Platform.sh)
-    if [ -d $PLATFORM_APP_DIR/$MOUNT_TMP ]; then
-        mkdir $PLATFORM_APP_DIR/$MOUNT_TMP
-    fi 
-    # Duplicate the mount directory in MOUNT_TMP. 
+    # Duplicate the mount directory in MOUNT_TMP.
+    # On the first pass, this will automatically also create the tmp directoy (MOUNT_TMP, /app/platformsh-mounts on Platform.sh)
     mkdir -p $PLATFORM_APP_DIR/$MOUNT_TMP/$MOUNT-tmp
     # Move its files.
     mv $PLATFORM_APP_DIR/$MOUNT/* $PLATFORM_APP_DIR/$MOUNT_TMP/$MOUNT-tmp
@@ -41,7 +38,7 @@ restore_files() {
     MOUNT=`clean_mount_defn $1`
     if [ -d $PLATFORM_APP_DIR/$MOUNT_TMP/$MOUNT-tmp ]; then 
         # Clean up files in mount so it's up to date with what we're moving over. 
-        rm -r $PLATFORM_APP_DIR/$MOUNT/*
+        rm -rf $PLATFORM_APP_DIR/$MOUNT/*
         # Restore the directory's files.
         cp -r $PLATFORM_APP_DIR/$MOUNT_TMP/$MOUNT-tmp/* $PLATFORM_APP_DIR/$MOUNT
     fi 
