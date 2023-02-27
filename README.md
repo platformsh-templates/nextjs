@@ -12,7 +12,7 @@ Next.js is an open-source web framework written for Javascript.
 
 ## Features
 
-* Node.js 14
+* Node.js 14 LTS
 * Automatic TLS certificates
 * yarn-based build
 
