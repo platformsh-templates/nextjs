@@ -1,8 +1,8 @@
 name: Trigger Source Operations on a Schedule
 on:
   schedule:
-    # Run at 00:15 every day
-    - cron: '15 0 * * *'
+    # Run at 15 minutes after the hour on every 19th hour
+    - cron: '15 */19 * * *'
   workflow_dispatch:
 
 env:
