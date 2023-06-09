@@ -1724,9 +1724,9 @@ camelcase@5.3.1, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001093, caniuse-lite@^1.0.30001489:
-  version "1.0.30001495"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001495.tgz#64a0ccef1911a9dcff647115b4430f8eff1ef2d9"
-  integrity sha512-F6x5IEuigtUfU5ZMQK2jsy5JqUUlEFRVZq8bO2a+ysq5K7jD6PPc9YXZj78xDNS3uNchesp1Jw47YXEqr+Viyg==
+  version "1.0.30001497"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001497.tgz#0e5387b98e7dbf9c4f743fb16e92cbf0ca780714"
+  integrity sha512-I4/duVK4wL6rAK/aKZl3HXB4g+lIZvaT4VLAn2rCgJ38jVLb0lv2Xug6QuqmxXFVRJMF74SPPWPJ/1Sdm3vCzw==
 
 chalk@4.0.0:
   version "4.0.0"
@@ -2255,9 +2255,9 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 electron-to-chromium@^1.3.488, electron-to-chromium@^1.4.411:
-  version "1.4.425"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.425.tgz#399df13091b836d28283a545c25c8e4d9da86da8"
-  integrity sha512-wv1NufHxu11zfDbY4fglYQApMswleE9FL/DSeyOyauVXDZ+Kco96JK/tPfBUaDqfRarYp2WH2hJ/5UnVywp9Jg==
+  version "1.4.426"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.426.tgz#077107b6565c081ce7d0a988fbce6d4ac2d49557"
+  integrity sha512-dWuNH+XUT9hdFHASfMpcZGW5kUyJvllumJkXaXiswuCkoaFIFI89aykBPuHEi1YUWQGRCqvIO0BUdmeFJ4W4Ww==
 
 elliptic@^6.5.3:
   version "6.5.4"
