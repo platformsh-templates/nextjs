@@ -8,7 +8,7 @@ type: 'nodejs:14'
 
 dependencies:
     nodejs:
-        yarn: "^1.22.0"
+        yarn: '^1.22.0'
 
 build:
     flavor: none
@@ -30,6 +30,9 @@ hooks:
     deploy: |
         # Move committed files from temp directory back into mounts.
         ./handle_mounts.sh
+        # On consecutive builds the server was already started before the new files were copied,
+        # so kill the process so that it automatically restarts with the new files
+        kill -9 $(lsof -t -i:$PORT)
 
 # The configuration of the application when it is exposed to the web.
 web:
@@ -47,7 +50,7 @@ mounts:
         source_path: 'next'
 
 source:
-  operations:
-    auto-update:
-      command: |
-        curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0
+    operations:
+        auto-update:
+            command: |
+                curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0
