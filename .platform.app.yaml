@@ -26,7 +26,7 @@ web:
   # More information: https://docs.platform.sh/create-apps/app-reference.html#web-commands
     commands:
         # The command to launch your app. If it terminates, it’s restarted immediately.
-        start: npx next start -p $PORT
+        start: cross-env npx next start -p $PORT
 
 # Specifies a default set of build tasks to run. Flavors are language-specific.
 # More information: https://docs.platform.sh/create-apps/app-reference.html#build
