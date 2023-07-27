@@ -9,9 +9,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
-    "next": "^9.5.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "eslint-config-next": "^13.4.12",
+    "next": "^13.4.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
