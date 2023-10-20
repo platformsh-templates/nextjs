@@ -292,13 +292,13 @@ busboy@1.6.0:
     streamsearch "^1.1.0"
 
 call-bind@^1.0.0, call-bind@^1.0.2, call-bind@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/call-bind/-/call-bind-1.0.4.tgz#ef8386f4e78974d32b771d4a70f827c558a19408"
-  integrity sha512-e68w37XfAb5fL5M3NTxqKLcXRUkL2/kFlQjQjE/8jvPMBKmO5ZDycRkS/DrZRXjegOzwWzEwW88m+8r+D0PUUA==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/call-bind/-/call-bind-1.0.5.tgz#6fa2b7845ce0ea49bf4d8b9ef64727a2c2e2e513"
+  integrity sha512-C3nQxfFZxFRVoJoGKKI8y3MOEo129NQ+FgQ08iye+Mk4zNZZGdjfs06bVTr+DBSlA66Q2VEcMki/cUCP4SercQ==
   dependencies:
     function-bind "^1.1.2"
     get-intrinsic "^1.2.1"
-    set-function-length "^1.1.0"
+    set-function-length "^1.1.1"
 
 caniuse-lite@^1.0.30001406:
   version "1.0.30001551"
@@ -1333,7 +1333,7 @@ semver@^7.5.4:
   dependencies:
     lru-cache "^6.0.0"
 
-set-function-length@^1.1.0:
+set-function-length@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/set-function-length/-/set-function-length-1.1.1.tgz#4bc39fafb0307224a33e106a7d35ca1218d659ed"
   integrity sha512-VoaqjbBJKiWtg4yRcKBQ7g7wnGnLV3M8oLvVWwOk2PdYY6PEFegR1vezXR0tw6fZGF9csVakIRjrJiy2veSBFQ==
