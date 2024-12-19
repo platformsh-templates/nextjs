@@ -1235,13 +1235,14 @@ object-keys@^1.1.1:
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
 object.assign@^4.1.4, object.assign@^4.1.5:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.6.tgz#b628b1b03f7e76f045c05f8e436976ac0a19f69e"
-  integrity sha512-yVh6qdqwYsX9rUYzK6VGV4QT16okE8zNvcX0uRPg9MmBNcvPdTJi7cErXnUw/IeQ7Cg4tYMM6BTL3JEcEA0YTQ==
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.7.tgz#8c14ca1a424c6a561b0bb2a22f66f5049a945d3d"
+  integrity sha512-nK28WOo+QIjBkDduTINE4JkF/UJJKyf2EJxvJKfblDpyg0Q+pkOHNTL0Qwy6NP6FhE/EnzV73BxxqcJaXY9anw==
   dependencies:
     call-bind "^1.0.8"
     call-bound "^1.0.3"
     define-properties "^1.2.1"
+    es-object-atoms "^1.0.0"
     has-symbols "^1.1.0"
     object-keys "^1.1.1"
 
