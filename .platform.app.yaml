@@ -58,6 +58,10 @@ hooks:
     deploy: |
         # Move committed files from temp directory back into mounts.
         ./handle_mounts.sh
+        
+        # As Next.js was started with the outdated files on the mount,
+        # we need to restart it now once, so that it picks up the new application code.
+        systemctl --user restart app
 
 # Information on the app's source code and operations that can be run on it.
 # More information: https://docs.platform.sh/create-apps/app-reference.html#source
