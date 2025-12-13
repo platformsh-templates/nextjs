@@ -25,6 +25,14 @@ web:
   # Commands are run once after deployment to start the application process.
   # More information: https://docs.platform.sh/create-apps/app-reference.html#web-commands
     commands:
+        pre_start: |
+            # Ensure files from the latest build have been copied before starting.
+            touch .next/build-tree-id
+            if [ "$(< .next/build-tree-id)" != "$PLATFORM_TREE_ID" ]; then
+                echo >&2 "Waiting for deployment to complete"
+                while [ "$(< .next/build-tree-id)" != "$PLATFORM_TREE_ID" ]; do sleep 1; done
+            fi
+
         # The command to launch your app. If it terminates, it’s restarted immediately.
         start: npx next start -p $PORT
 
@@ -47,17 +55,21 @@ hooks:
   # The build hook is run after any build flavor.
   # More information: https://docs.platform.sh/create-apps/hooks/hooks-comparison.html#build-hook
     build: |
+        set -e
         yarn
         yarn build
-        # Move committed files in soon-to-be mounts into temp directory.
-        chmod +x handle_mounts.sh
-        ./handle_mounts.sh
+        mv .next .next-built # Move built files to avoid conflict with the mount.
 
   # The deploy hook is run after the app container has been started, but before it has started accepting requests.
   # More information: https://docs.platform.sh/create-apps/hooks/hooks-comparison.html#deploy-hook
     deploy: |
-        # Move committed files from temp directory back into mounts.
-        ./handle_mounts.sh
+        set -e
+        # If the build has changed, copy files to the mount for runtime use.
+        touch .next/build-tree-id
+        if [ "$(< .next/build-tree-id)" != "$PLATFORM_TREE_ID" ]; then
+            cp -Rs $PWD/.next-built/* .next
+            echo -n "$PLATFORM_TREE_ID" > .next/build-tree-id
+        fi
 
 # Information on the app's source code and operations that can be run on it.
 # More information: https://docs.platform.sh/create-apps/app-reference.html#source
