@@ -492,9 +492,9 @@ call-bound@^1.0.2, call-bound@^1.0.3, call-bound@^1.0.4:
     get-intrinsic "^1.3.0"
 
 caniuse-lite@^1.0.30001406:
-  version "1.0.30001812"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001812.tgz#55b32ed819d120b384149a4f9fd59d179ce008f9"
-  integrity sha512-qN+QNNBr93TCmFrmte0bBCjSDMuRvt78VlHT99qIGPszm4QsqCX8lnyWUFkHi8B7ZBAPq8SH+UqyXNy/odMdng==
+  version "1.0.30001813"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001813.tgz#acc16d52a011b87873b14e3c62040bb273c270eb"
+  integrity sha512-zfjJo4rM0+fUomGDBW/xcDjhIwz/210DGvip2MAMDZ8KHcRPnOHmEgHPZP0UHlZoxr8fYKVJOqcORhYQcG4FKQ==
 
 client-only@0.0.1:
   version "0.0.1"
